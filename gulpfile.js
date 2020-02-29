@@ -40,14 +40,14 @@ gulp.task('html', function(){
 ////////////////////////////////////////////////
 
 gulp.task('watch', function () {
-   gulp.watch('app/sass/**/*.sass', ['sass']);
-   // gulp.watch('app/js/**/*.js', ['scripts']);
-   gulp.watch('app/build/*.html', ['html']);
-   gulp.watch('app/templates/*.html', ['html']);
+   gulp.watch('app/sass/**/*.sass', gulp.series['sass']);
+   // gulp.watch('app/js/**/*.js', gulp.series['scripts']);
+   gulp.watch('app/build/*.html', gulp.series['html']);
+   gulp.watch('app/templates/*.html', gulp.series['html']);
 });
 
 ////////////////////////////////////////////////
 ////////         Default              //////////
 ////////////////////////////////////////////////
 
-gulp.task('default', ['watch', 'sass', 'html']); // 'scripts'
+gulp.task('default', gulp.parallel('watch', 'sass', 'html')); // 'scripts'
