@@ -4,7 +4,7 @@
 var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
-	sass = require('gulp-sass'),
+	sass = require('gulp-sass')(require('sass'));
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
 	rigger = require('gulp-rigger'),
@@ -31,7 +31,7 @@ function styles(){
 	return gulp.src(paths.styles.src)
 	.pipe(plumber())
 	.pipe(sass())
-    .pipe(autoprefixer({browsers: ['last 10 version'], cascade: false}))
+    .pipe(autoprefixer({cascade: false}))
     .pipe(gulp.dest(paths.styles.dest));
 };
 

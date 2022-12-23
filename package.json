@@ -1,22 +1,44 @@
 {
-  "name": "gulpstarter",
+  "name": "gulp-start",
   "version": "1.0.0",
-  "description": "starting folder fot gulp project",
-  "main": "index.js",
+  "description": "For begin project Type in console: 1. npm install 2. gulp",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farid-92/gulp-start.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farid-92/gulp-start/issues"
+  },
+  "homepage": "https://github.com/farid-92/gulp-start#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-watch": "^5.0.1",
-    "gulp-plumber": "^1.2.1",
-    "gulp-autoprefixer": "^3.1.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^2.0.0"
-  }
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.0.1",
+    "sass": ",^1.57.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ]
 }
